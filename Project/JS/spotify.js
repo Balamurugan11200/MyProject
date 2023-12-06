@@ -236,7 +236,7 @@ screensize.addEventListener("click",(value)=>{
         plays.style.display="block"
         location="#plays";
         plays.style.height="90vh";
-        image.style.height="500px";
+        image.style.height="430px";
         image.style.width="100%";
         container.style.display="none";
         searcharia.style.display="none" 
@@ -275,7 +275,7 @@ function search(){
     console.log(searcharia.style.display)
     plays.style.display="none"
     searcharia.style.display="block"
-    searcharia.style.height="90vh"
+    searcharia.style.height="85vh"
     container.style.display="none"
     subscription.style.display="none"
     paymentprocess.style.display="none"
