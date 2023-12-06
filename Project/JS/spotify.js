@@ -64,6 +64,7 @@ audioElement.addEventListener("ended",(value)=>{
         audioElement.currentTime=0;
         audioElement.play();
         pause.src="../Image/circle-play-solid.svg"
+        smallpause.src="../Image/circle-play-solid.svg"
     }else 
     if(index==songs.length){
         index=0;
@@ -71,12 +72,14 @@ audioElement.addEventListener("ended",(value)=>{
         audioElement.currentTime=0;
         audioElement.play();
         pause.src="../Image/circle-play-solid.svg"
+        smallpause.src="../Image/circle-play-solid.svg"
     } else 
     if(bool == "looping"){
         audioElement.src=`../Songs/${index}.mp3`;
         audioElement.currentTime=0;
         audioElement.play();
         pause.src="../Image/circle-play-solid.svg"
+        smallpause.src="../Image/circle-play-solid.svg"
     }
     let reference=document.getElementById(`${index}`)
     playertext.textContent=reference.ariaValueMin;
@@ -103,8 +106,10 @@ function repeats(){
     if( bool=="noloop"){
         if(audioElement.paused){
             pause.src="../Image/pause-solid.svg"
+            smallpause.src="../Image/pause-solid.svg"
         }else{   
             pause.src="../Image/circle-play-solid.svg"
+            smallpause.src="../Image/circle-play-solid.svg"
         }
         looping[0].textContent="loop"
         // looping[1].textContent="loop"
@@ -140,6 +145,7 @@ function farwards(){
     audioElement.currentTime=0;
     audioElement.play();
     pause.src="../Image/circle-play-solid.svg"
+    smallpause.src="../Image/circle-play-solid.svg"
     let reference=document.getElementById(`${index}`)
     playertext.textContent=reference.ariaValueMin;
     playerimage.src=`../Image/img/${index}.jpg`
@@ -161,6 +167,7 @@ function backwards(){
     audioElement.currentTime=0;
     audioElement.play();
     pause.src="../Image/circle-play-solid.svg"
+    smallpause.src="../Image/circle-play-solid.svg"
     let reference=document.getElementById(`${index}`)
     playertext.textContent=reference.ariaValueMin;
     playerimage.src=`../Image/img/${index}.jpg`
@@ -170,6 +177,7 @@ Array.from(document.getElementsByClassName("listitem")).forEach((element)=>{
     element.addEventListener("click",(e)=>{
         console.log(e.target)
         pause.src="../Image/circle-play-solid.svg"
+        smallpause.src="../Image/circle-play-solid.svg"
         index =parseInt(e.target.id);
         console.log(index)
         audioElement.src=`../Songs/${index}.mp3`;
@@ -198,8 +206,8 @@ mediaplayer.addEventListener("click",(value)=>{
     if(value.target.id=="mediaplayer"){
         plays.style.display="block";
         location="#plays";
-        plays.style.height="92vh";
-        image.style.height="80vh";
+        plays.style.height="90vh";
+        image.style.height="480px";
         image.style.width="100%";
         searcharia.style.display="none";
         subscription.style.display="none";
@@ -227,8 +235,8 @@ screensize.addEventListener("click",(value)=>{
     if(value.target.id=="screensize"){ 
         plays.style.display="block"
         location="#plays";
-        plays.style.height="100vh";
-        image.style.height="450px";
+        plays.style.height="90vh";
+        image.style.height="370px";
         image.style.width="100%";
         container.style.display="none";
         searcharia.style.display="none" 
@@ -300,6 +308,7 @@ searchresult.addEventListener("click",(result)=>{
                     audioElement.currentTime=0;
                     audioElement.play();
                     pause.src="../Image/circle-play-solid.svg"
+                    smallpause.src="../Image/circle-play-solid.svg"
                     let reference=document.getElementById(`${index}`)
                     playertext.textContent=reference.ariaValueMin;
                     playerimage.src=`../Image/img/${index}.jpg`
